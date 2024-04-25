@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sign">
+    <input type="text" id="name" class="" placeholder="Full Name"> <br>
+    <input type="text" id="phone" class="" placeholder="Reachable phone no"> <br>
+    <input type="text" id="Email" class="" placeholder="Email address"> <br>
+    <input type="text" id="password" class="" placeholder="password"> <br>
+    <input type="text" id="address" class="" placeholder="home address"> <br>
+    <button onclick="Register()">Regiter</button>
+    </div>
+
+    <script>
+        var allCustomer
+        if (localStorage.customers) {
+            let getBack=JSON.parse(localStorage.getItem(allCustomer))
+            customers=getBack
+        }
+        const Register = () => {
+            var customers ={
+                name:name.value,
+                phone:phone.value,
+                Email:Email.value,
+                password:password.value,
+                address:address.value
+            }
+            // customersLocation.push(customer)
+            console.log(allCustomer)
+            localStorage.setItem("customer",JSON.stringify(customers))
+            window.location.href="index.html"   
+        }
+    </script>
+</body>
+</html>
